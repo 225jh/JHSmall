@@ -146,9 +146,9 @@ public class ActionFactory {
 			action = new AdminMainAction();
 		}else if(command.equals("admin_product_UpdateForm")) {
 			action = new AdminUpdateFormAction();
-		}else if(command.equals("admin_productUpdate")) {
+		}else if(command.equals("admin_pUpdate")) {
 			action = new AdminUpdateAction();
-		}else if(command.equals("admin_productDelete")) {
+		}else if(command.equals("admin_pDelete")) {
 			action = new AdminDeleteAction();
 		}else if(command.equals("admin_category_list")) {
 			action = new AdminCategoryList();

@@ -56,6 +56,11 @@ background:#ffffff;
 left:600px;
 top:40px;
 }
+#category_container{
+position:absolute;
+right:300px;
+top:100px;
+}
 .mypage{
 position:absolute;
 width:100px;
@@ -113,7 +118,7 @@ color:red;
 		<input id="input" type="search" placeholder="검색어 입력" name="search">
 		<button id="input_but" type="submit">검색</button>
 	</div>
-	</div>
+	
 	
 	<div id="category_container">
 		<table id="category_table">
@@ -134,6 +139,7 @@ color:red;
 				<th><a href="ShopServlet?command=admin_category_list&categoryName=acc6" class="a_tag a_tag3">패션소품</a></th>
 			</tr>
 		</table>
+	</div>
 	</div>
 </form>
 </body>

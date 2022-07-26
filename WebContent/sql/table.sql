@@ -25,66 +25,99 @@ select * from mtm;
 
 --Table
 create table client(
-id      varchar2(100)  not null primary key, --PK
+id      varchar2(100)  not null, --PK
 pw 	    varchar2(100)  not null,
 name    varchar2(100)  not null,
 email   varchar2(100)  not null,
 address varchar2(100) not null,
-phone   varchar2(100)  not null
+phone   varchar2(100)  not null,
+CONSTRAINT Client_PK PRIMARY KEY(id)
 );
 select * from client;
 
 create table admin(
-admin_id   varchar2(100) not null primary key, --PK
-admin_name varchar2(100) not null,
-admin_pw   varchar2(100) not null
+id   varchar2(100) not null, --PK
+name varchar2(100) not null,
+pw   varchar2(100) not null,
+CONSTRAINT Admin_PK PRIMARY KEY(id)
 );
 
-
 create table product(
-pNum        number       not null primary key, --PK
+pNum        number       not null, --PK
 pName       varchar2(100) not null,
 pPrice      number       not null,
 pImg        varchar2(100),
 pShortInfo  varchar2(200),
 pDetailInfo varchar2(4000),
-pCategory   varchar2(100)
+pCategory   varchar2(100),
+CONSTRAINT Product_PK PRIMARY KEY(pNum)
 );
 
 
 create table product_order(
-pNum      number        references product(pNum), --FK : product(pNum)
-id        varchar2(100)  references client(id), --FK : client(id)
-oNum      number        not null primary key, --PK
+pNum      number, --FK : product(pNum)
+id        varchar2(100), --FK : client(id)
+oNum      number        not null, --PK
 oPrice    number        not null,
 cnt       number        default 1 not null,
 oName     varchar2(100)  not null,
 oAddress  varchar2(100) not null,
 oPhone    varchar2(100),
-oDate     TimeStamp     default sysdate
-);
-select * from product_order;
+oDate     TimeStamp     default sysdate,
+CONSTRAINT P_order_PK PRIMARY KEY(oNum),
 
+CONSTRAINT Client_FK
+FOREIGN KEY(id) REFERENCES client(id)
+ON DELETE CASCADE,
+
+CONSTRAINT Product_FK
+FOREIGN KEY(pNum) REFERENCES product(pNum)
+ON DELETE CASCADE
+);
+
+select * from product_order;
+--FK 제거 후 CASCADE 포함된 제약조건 다시 걸기
+ALTER TABLE product_order DROP FOREIGN KEY SYS_C007472;
 
 create table review(
-pNum       number       references product(pNum), --FK : product(pNum)
-id         varchar2(100) references client(id), --FK : client(id)
-oNum       number       references product_order(oNum), --FK : product_order(oNum)
-rNum       number       not null primary key, --PK
+pNum       number       , --FK : product(pNum)
+id         varchar2(100), --FK : client(id)
+oNum       number       , --FK : product_order(oNum)
+rNum       number       not null, --PK
 content    varchar2(4000),
 rImg       varchar2(1000),
-rDate      TimeStamp    default sysdate not null
+rDate      TimeStamp    default sysdate not null,
+CONSTRAINT Review_PK PRIMARY KEY(rNum),
+
+CONSTRAINT Client_review_FK
+FOREIGN KEY(id) REFERENCES client(id)
+ON DELETE CASCADE,
+
+CONSTRAINT Product_review_FK
+FOREIGN KEY(pNum) REFERENCES product(pNum)
+ON DELETE CASCADE,
+
+CONSTRAINT P_order_review_FK
+FOREIGN KEY(oNum) REFERENCES product_order(oNum)
+ON DELETE CASCADE
 );
+
 select * from review;
 
 create table mtm(
-id      varchar2(15)   references client(id), --FK : client(id)
-mNum    number         not null primary key,
+id      varchar2(15)   , --FK : client(id)
+mNum    number         not null,
 mKind   varchar2(20)   not null,
 title   varchar2(100)  not null,
 content varchar2(4000) not null,
 reply   varchar2(4000),
-mDate   TimeStamp      default sysdate not null
+mDate   TimeStamp      default sysdate not null,
+
+CONSTRAINT mtm_PK PRIMARY KEY(mNum),
+
+CONSTRAINT Client_mtm_FK
+FOREIGN KEY(id) REFERENCES client(id)
+ON DELETE CASCADE
 );
 
 create table cart(

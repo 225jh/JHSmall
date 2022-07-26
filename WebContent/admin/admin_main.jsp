@@ -57,6 +57,7 @@ color:red;
 	<div id="big">
 		<div id="small">
 			<jsp:include page="../include/admin_header.jsp"/>
+			<br><br><br><br><br><br><br><br><br><br><br><br>
 			<div id="banner">
 				<img src="https://i.imgur.com/dL3KmVD.png">
 			</div>
