@@ -107,18 +107,40 @@ color:black;
 .a_tag3:hover{
 color:red;
 }
+ul li{
+font-size:30px;
+}
 </style>
 </head>
 <body>
 <form method="post" action="ShopServlet">
 <input type="hidden" name="command" value="search">
 <div id="p_container_header">
+	<a href="ShopServlet?command=admin_main" class="a_tag3" style="font-size:50px;"><b>홈으로</b></a>
+	
+	<div id="login">
+	<c:choose>
+			<c:when test="${empty sessionScope.loginAdmin}">
+				<a href="ShopServlet?command=admin_loginForm" class="a_tag a_tag3">관리자 로그인</a>
+			</c:when>
+	<c:otherwise>
+			 	${sessionScope.loginAdmin.name}님(${sessionScope.loginAdmin.id})반갑습니다.<br>
+	<ul style="float:right;">
+		<li><a href="ShopServlet?command=admin_clientList" class="a_tag3">회원정보 관리</a>
+		<li><a href="ShopServlet?command=admin_mtmList" class="a_tag3">1:1문의 관리</a>
+		<li><a href="ShopServlet?command=admin_pInsert" class="a_tag3">상품 등록</a>
+		<li><a href="ShopServlet?command=admin_reviewCall" class="a_tag3">리뷰 관리</a>
+	</ul>
+	</c:otherwise>
+	</c:choose>
+	</div>
 	
 	<div id="search">
 		<input id="input" type="search" placeholder="검색어 입력" name="search">
 		<button id="input_but" type="submit">검색</button>
 	</div>
 	
+
 	
 	<div id="category_container">
 		<table id="category_table">

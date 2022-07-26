@@ -1,4 +1,4 @@
---Table
+--Drop Table
 drop table client;
 drop table admin;
 drop table product;
@@ -33,7 +33,7 @@ address varchar2(100) not null,
 phone   varchar2(100)  not null,
 CONSTRAINT Client_PK PRIMARY KEY(id)
 );
-select * from client;
+
 
 create table admin(
 id   varchar2(100) not null, --PK
@@ -75,9 +75,7 @@ FOREIGN KEY(pNum) REFERENCES product(pNum)
 ON DELETE CASCADE
 );
 
-select * from product_order;
---FK 제거 후 CASCADE 포함된 제약조건 다시 걸기
-ALTER TABLE product_order DROP FOREIGN KEY SYS_C007472;
+
 
 create table review(
 pNum       number       , --FK : product(pNum)
@@ -102,7 +100,6 @@ FOREIGN KEY(oNum) REFERENCES product_order(oNum)
 ON DELETE CASCADE
 );
 
-select * from review;
 
 create table mtm(
 id      varchar2(15)   , --FK : client(id)
@@ -126,8 +123,6 @@ id   varchar2(100),
 pNum number,
 cnt  number
 );
-
-select * from cart;
 
 
 drop sequence pNum_seq;

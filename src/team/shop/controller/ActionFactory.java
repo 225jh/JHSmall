@@ -42,6 +42,7 @@ import team.shop.controller.action.savingAction;
 import team.shop.controller.admin.action.AdminCategoryList;
 import team.shop.controller.admin.action.AdminDeleteAction;
 import team.shop.controller.admin.action.AdminLoginAction;
+import team.shop.controller.admin.action.AdminLoginFormAction;
 import team.shop.controller.admin.action.AdminMainAction;
 import team.shop.controller.admin.action.AdminUpdateAction;
 import team.shop.controller.admin.action.AdminUpdateFormAction;
@@ -140,7 +141,9 @@ public class ActionFactory {
 		
 			
 		//admin Action
-		else if(command.equals("admin_login")) {
+		else if(command.equals("admin_loginForm")) {
+			action = new AdminLoginFormAction();
+		}else if(command.equals("admin_login")) {
 			action = new AdminLoginAction();
 		}else if(command.equals("admin_main")) {
 			action = new AdminMainAction();
