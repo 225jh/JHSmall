@@ -126,10 +126,10 @@ font-size:30px;
 	<c:otherwise>
 			 	${sessionScope.loginAdmin.name}님(${sessionScope.loginAdmin.id})반갑습니다.<br>
 	<ul style="float:right;">
-		<li><a href="ShopServlet?command=admin_clientList" class="a_tag3">회원정보 관리</a>
+		<li><a href="ShopServlet?command=admin_memberList" class="a_tag3">회원정보 관리</a>
 		<li><a href="ShopServlet?command=admin_mtmList" class="a_tag3">1:1문의 관리</a>
-		<li><a href="ShopServlet?command=admin_pInsert" class="a_tag3">상품 등록</a>
-		<li><a href="ShopServlet?command=admin_reviewCall" class="a_tag3">리뷰 관리</a>
+		<li><a href="ShopServlet?command=admin_pInsertForm" class="a_tag3">상품 등록</a>
+		<li><a href="ShopServlet?command=admin_review_call" class="a_tag3">리뷰 관리</a>
 	</ul>
 	</c:otherwise>
 	</c:choose>

@@ -214,5 +214,31 @@ public class productDAO {
 				DBManager.close(conn, pstmt);
 			}
 	}
+		public void productInsert(productVO pVo) {
+			
+			String sql = "insert into product values(pNum_seq.nextval,?,?,?,?,?,?)";
+			
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			
+			try {
+				conn = DBManager.getConnection();
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, pVo.getpName());
+				pstmt.setInt(2, pVo.getpPrice());
+				pstmt.setString(3, pVo.getpImg());
+				pstmt.setString(4, pVo.getpShortInfo());
+				pstmt.setString(5, pVo.getpDetailInfo());
+				pstmt.setString(6, pVo.getpCategory());
+				
+				pstmt.executeUpdate();
+		
+			}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
 
+}
 }

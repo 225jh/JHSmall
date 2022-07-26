@@ -1,6 +1,7 @@
-package team.shop.controller.action;
+package team.shop.controller.admin.action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,27 +10,24 @@ import javax.servlet.http.HttpServletResponse;
 
 import team.shop.DAO.mtmDAO;
 import team.shop.DTO.mtmVO;
+import team.shop.controller.action.Action;
 
-public class mtmUpdate implements Action {
+public class AdminMtmList implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url="ShopServlet?command=mypage_7";
+		String url="/admin/AdminMtmList.jsp";
 		
-		mtmVO mtmVo = new mtmVO();
-	
-		mtmVo.setmNum(Integer.parseInt(request.getParameter("mNum")));
-		mtmVo.setTitle(request.getParameter("title"));
-		mtmVo.setContent(request.getParameter("content"));
-		mtmVo.setmKind(request.getParameter("mKind"));
 		
-		mtmDAO mtmDao = mtmDAO.getInstance();
-		mtmDao.mtmUpdate(mtmVo);
+		 
+		 mtmDAO mtmDao = mtmDAO.getInstance(); 
+		 ArrayList<mtmVO> mtmVo = mtmDao.mtmList();
 		
-		/*new MyPage6Action().execute(request, response);*/
+		 request.setAttribute("mtm", mtmVo);
+		 
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
-		
 
 	}
 

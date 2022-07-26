@@ -106,7 +106,7 @@ color:white;
 		<hr style="width: 900px;">
 		<p>문의내용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${mtm.content}</p>
 		<hr style="width: 900px;">
-		<p>답변내용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(데이터베이스)</p>
+		<p>답변내용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${mtm.reply}</p>
 		<input type="button" value="수정하기" id="but" onclick="location.href='ShopServlet?command=mtmUpdateForm&mNum=${mtm.mNum}'">
 		<input type="button" value="삭제하기" id="but" onclick="location.href='ShopServlet?command=mtmDelete&mNum=${mtm.mNum}'"> 
 			</div><!-- mypage_div -->

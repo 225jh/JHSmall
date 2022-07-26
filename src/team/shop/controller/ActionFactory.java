@@ -1,6 +1,6 @@
 package team.shop.controller;
 
-import team.shop.controller.action.Action; 
+import team.shop.controller.action.Action;  
 import team.shop.controller.action.CartDelete;
 import team.shop.controller.action.CartInsert;
 import team.shop.controller.action.CartList;
@@ -44,8 +44,20 @@ import team.shop.controller.admin.action.AdminDeleteAction;
 import team.shop.controller.admin.action.AdminLoginAction;
 import team.shop.controller.admin.action.AdminLoginFormAction;
 import team.shop.controller.admin.action.AdminMainAction;
+import team.shop.controller.admin.action.AdminMtmList;
+import team.shop.controller.admin.action.AdminMtmOneList;
+import team.shop.controller.admin.action.AdminMtmUpdateAction;
+import team.shop.controller.admin.action.AdminProductInsert;
+import team.shop.controller.admin.action.AdminProductInsertForm;
+import team.shop.controller.admin.action.AdminReviewCall;
+import team.shop.controller.admin.action.AdminReviewDelete;
 import team.shop.controller.admin.action.AdminUpdateAction;
 import team.shop.controller.admin.action.AdminUpdateFormAction;
+import team.shop.controller.admin.action.admin_memberDeleteAction;
+import team.shop.controller.admin.action.admin_memberDetailUpdateAction;
+import team.shop.controller.admin.action.admin_memberDetailViewAction;
+import team.shop.controller.admin.action.admin_memberListsearchAction;
+import team.shop.controller.admin.action.admin_memberListselectAction;
 
 public class ActionFactory {
 	//싱글톤 형태로 유일하게 한 개의 객체만 생성하고 getInstance()로 호출해 사용함
@@ -155,11 +167,33 @@ public class ActionFactory {
 			action = new AdminDeleteAction();
 		}else if(command.equals("admin_category_list")) {
 			action = new AdminCategoryList();
+		}else if(command.equals("admin_memberList")) {
+			action = new admin_memberListselectAction();
+		}else if(command.equals("admin_memberListsearch")) {
+			action = new admin_memberListsearchAction();
+		}else if(command.equals("admin_memberDetail")) {
+			action = new admin_memberDetailViewAction();
+		}else if(command.equals("admin_memberDetailUpdate")) {
+			action = new admin_memberDetailUpdateAction();
+		}else if(command.equals("admin_memberDelete")) {
+			action = new admin_memberDeleteAction();
+		}else if(command.equals("admin_mtmList")) {
+			action = new AdminMtmList();
+		}else if(command.equals("Admin_mtm_one_list")) {
+			action = new AdminMtmOneList();
+		}else if(command.equals("Admin_mtm_reply_update")) {
+			action = new AdminMtmUpdateAction();
+		}else if(command.equals("admin_review_call")) {
+			action = new AdminReviewCall();
+		}else if(command.equals("admin_review_delete")) {
+			action = new AdminReviewDelete();
+		}else if(command.equals("admin_pInsertForm")) {
+			action = new AdminProductInsertForm();
+		}else if(command.equals("admin_pInsert")) {
+			action = new AdminProductInsert();
 		}
 		//command에 해당하는 Action을 Servlet으로 리턴해줌
 		return action;
-		
 	}
-	
 	
 }
