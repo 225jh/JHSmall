@@ -74,7 +74,7 @@ select {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			
 			<div id="a_container">
@@ -115,9 +115,9 @@ select {
 				<div id="div1">
 					분류 
 					<select name="mKind" onchange="this.form.kind.value=this[this.selectedIndex].value;">
-						<option value="[제품문의1]">[제품문의1]</option>
-						<option value="[제품문의2]">[제품문의2]</option>
-						<option value="[제품문의3]">[제품문의3]</option>
+						<option value="[상품]">[상품]</option>
+						<option value="[배송]">[배송]</option>
+						<option value="[기타]">[기타]</option>
 						
 					</select> <br> <br> 
 					

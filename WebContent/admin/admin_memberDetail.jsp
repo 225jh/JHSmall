@@ -92,10 +92,18 @@ html, body {
 	margin: auto;
 	display: block;
 }
+#small {
+	padding-bottom: 200px; 
+	margin-left:10%;
+	padding-top : 100px;
+}
 
 </style>
 </head>
 <body>
+<jsp:include page="../include/admin_header.jsp"/>
+<div id = small>
+
 	<form name="frm" method="post"
 		action="ShopServlet?command=admin_memberDetailUpdate">
 
@@ -157,6 +165,7 @@ html, body {
 			<input type="button" id="loginbut" value="회원정보수정" onclick="go_save()">
 		</div>
 	</form>
+	</div>
 </body>
 <script
 	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

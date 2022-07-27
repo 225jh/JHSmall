@@ -5,8 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+#small {
+	padding-bottom: 200px; 
+	margin-left:30%;
+	padding-top : 100px;
+}
+</style>
 </head>
 <body>
+<jsp:include page="../include/admin_header.jsp"/>
+<div id = small>
 <form method="post" action="ShopServlet?command=Admin_mtm_reply_update&mNum=${admtm.mNum}">
 
 
@@ -23,5 +32,6 @@
 		<input type="submit" value="답변달기">
 		
 </form>
+</div>
 </body>
 </html>

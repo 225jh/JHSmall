@@ -70,7 +70,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<div id="a_container">
 				<aside id="aside">
@@ -119,18 +119,34 @@ p {
 					<hr style="width:1210px; float:left"><br>
 					<details>
 						<summary>
-							<b>Q : </b>기타문의 질문1
+							<b>Q : </b>회원 가입은 어떻게 하나요?
 						</summary>
 						<p>
-							<b>A : </b>기타문의 답변2
+							<b>A : </b>우측 상단의 로그인 버튼을 눌러주세요.
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>기타문의 질문2
+							<b>Q : </b>회원 정보 수정은 어디서 하나요?
 						</summary>
 						<p>
-							<b>A : </b>>기타문의 답변2
+							<b>A : </b>마이페이지 수정 가능합니다.
+						</p>
+					</details>
+					<details>
+						<summary>
+							<b>Q : </b>회원 가입은 어떻게 하나요?
+						</summary>
+						<p>
+							<b>A : </b>우측 상단의 로그인 버튼을 눌러주세요.
+						</p>
+					</details>
+					<details>
+						<summary>
+							<b>Q : </b>회원 정보 수정은 어디서 하나요?
+						</summary>
+						<p>
+							<b>A : </b>마이페이지 수정 가능합니다.
 						</p>
 					</details>
 				</article>

@@ -6,10 +6,12 @@ import team.shop.controller.action.CartInsert;
 import team.shop.controller.action.CartList;
 import team.shop.controller.action.CartPayment;
 import team.shop.controller.action.CategoryDetailAction;
+import team.shop.controller.action.IdCheckAction;
 import team.shop.controller.action.IndexAction;
 import team.shop.controller.action.InsertOrder;
 import team.shop.controller.action.InsertReview;
 import team.shop.controller.action.JoinAction;
+import team.shop.controller.action.JoinContractAction;
 import team.shop.controller.action.JoinFormAction;
 import team.shop.controller.action.LoginAction;
 import team.shop.controller.action.LoginFormAction;
@@ -51,8 +53,11 @@ import team.shop.controller.admin.action.AdminProductInsert;
 import team.shop.controller.admin.action.AdminProductInsertForm;
 import team.shop.controller.admin.action.AdminReviewCall;
 import team.shop.controller.admin.action.AdminReviewDelete;
+import team.shop.controller.admin.action.AdminReviwReplyUpdate;
+import team.shop.controller.admin.action.AdminSearch;
 import team.shop.controller.admin.action.AdminUpdateAction;
 import team.shop.controller.admin.action.AdminUpdateFormAction;
+import team.shop.controller.admin.action.Admin_mtmList_Action;
 import team.shop.controller.admin.action.admin_memberDeleteAction;
 import team.shop.controller.admin.action.admin_memberDetailUpdateAction;
 import team.shop.controller.admin.action.admin_memberDetailViewAction;
@@ -86,10 +91,14 @@ public class ActionFactory {
 			action = new LoginAction();
 		}else if(command.equals("login_form")) {
 			action = new LoginFormAction();
+		}else if(command.equals("join_contract")) {
+			action = new JoinContractAction();
 		}else if(command.equals("join_form")) {
 			action = new JoinFormAction();
 		}else if(command.equals("join")) {
 			action = new JoinAction();
+		}else if(command.equals("id_check")) {
+			action = new IdCheckAction();
 		}else if(command.equals("logout")){
 			action = new LogoutAction();
 		}else if(command.equals("review")) {
@@ -179,7 +188,9 @@ public class ActionFactory {
 			action = new admin_memberDeleteAction();
 		}else if(command.equals("admin_mtmList")) {
 			action = new AdminMtmList();
-		}else if(command.equals("Admin_mtm_one_list")) {
+		}else if(command.equals("Admin_mtmList")) {
+	         action = new Admin_mtmList_Action();
+	     }else if(command.equals("Admin_mtm_one_list")) {
 			action = new AdminMtmOneList();
 		}else if(command.equals("Admin_mtm_reply_update")) {
 			action = new AdminMtmUpdateAction();
@@ -187,10 +198,14 @@ public class ActionFactory {
 			action = new AdminReviewCall();
 		}else if(command.equals("admin_review_delete")) {
 			action = new AdminReviewDelete();
+		}else if(command.equals("insert_rReply")) {
+			action = new AdminReviwReplyUpdate();
 		}else if(command.equals("admin_pInsertForm")) {
 			action = new AdminProductInsertForm();
 		}else if(command.equals("admin_pInsert")) {
 			action = new AdminProductInsert();
+		}else if(command.equals("admin_search")) {
+			action = new AdminSearch();
 		}
 		//command에 해당하는 Action을 Servlet으로 리턴해줌
 		return action;

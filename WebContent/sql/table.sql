@@ -75,7 +75,6 @@ FOREIGN KEY(pNum) REFERENCES product(pNum)
 ON DELETE CASCADE
 );
 
-
 select * from review;
 create table review(
 pNum       number       , --FK : product(pNum)
@@ -84,6 +83,7 @@ oNum       number       , --FK : product_order(oNum)
 rNum       number       not null, --PK
 content    varchar2(4000),
 rImg       varchar2(1000),
+rReply	   varchar2(1000),
 rDate      TimeStamp    default sysdate not null,
 CONSTRAINT Review_PK PRIMARY KEY(rNum),
 
@@ -99,6 +99,8 @@ CONSTRAINT P_order_review_FK
 FOREIGN KEY(oNum) REFERENCES product_order(oNum)
 ON DELETE CASCADE
 );
+
+SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'review';
 
 select * from mtm;
 create table mtm(
@@ -150,7 +152,7 @@ select * from mypage1_view;
 --View2
 create or replace view mypage5_view
 as
-select c.id, p.pNum, p.pName, p.pImg, r.content, r.rDate
+select c.id, p.pNum, p.pName, p.pImg, r.content, r.rReply, r.rDate
 from CLIENT c, PRODUCT p, REVIEW r
 where p.pNum = r.pNum and c.id = r.id;
 

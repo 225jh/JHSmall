@@ -114,9 +114,10 @@ font-size:30px;
 </head>
 <body>
 <form method="post" action="ShopServlet">
-<input type="hidden" name="command" value="search">
+<input type="hidden" name="command" value="admin_search">
+
 <div id="p_container_header">
-	<a href="ShopServlet?command=admin_main" class="a_tag3" style="font-size:50px;"><b>홈으로</b></a>
+	<a href="ShopServlet?command=admin_main" class="a_tag3" style="font-size:40px;"><b>관리자 홈으로</b></a>
 	
 	<div id="login">
 	<c:choose>
@@ -124,7 +125,7 @@ font-size:30px;
 				<a href="ShopServlet?command=admin_loginForm" class="a_tag a_tag3">관리자 로그인</a>
 			</c:when>
 	<c:otherwise>
-			 	${sessionScope.loginAdmin.name}님(${sessionScope.loginAdmin.id})반갑습니다.<br>
+			 	<b>${sessionScope.loginAdmin.name}님</b>(${sessionScope.loginAdmin.id})반갑습니다.<br>
 	<ul style="float:right;">
 		<li><a href="ShopServlet?command=admin_memberList" class="a_tag3">회원정보 관리</a>
 		<li><a href="ShopServlet?command=admin_mtmList" class="a_tag3">1:1문의 관리</a>

@@ -81,9 +81,12 @@ border-bottom:1px solid black
 <body>
 <div id="big">
 	<div id="small">
-		<jsp:include page="../include/header_notlogin.jsp"/>
- 	<hr size="2" style="color:lightgray">
-		<div id="mypage_div">
+		<jsp:include page="../include/header.jsp"/>
+ 		
+ 	<!-- mypage nav -->
+ 	<jsp:include page="../include/nav_mypage.jsp"/>
+<%-- 	<div id="mypage_div">
+		<hr size="2" style="color:lightgray">
 		<br><span id="mypage_span">마이페이지
 		</span>&nbsp;&nbsp;&nbsp;
 		<b>${sessionScope.loginUser.id}(${sessionScope.loginUser.name})</b>회원님을 위한 마이페이지 입니다.
@@ -92,12 +95,12 @@ border-bottom:1px solid black
 		<div id="mypage_table_div">
 		<table id="mypage_table">
 			<tr>
-				<th><a href="ShopServlet?command=mypage_1&id=${sessionScope.loginUser.id}" class="a_tag2">구매내역</a></th>
-				<th><a href="ShopServlet?command=mypage3_1_moveAction&id=${sessionScope.loginUser.id}" class="a_tag2">회원정보</a></th>
-				<th><a href="ShopServlet?command=mypage_5&id=${sessionScope.loginUser.id}" class="a_tag2">내 구매후기</a></th>
-				<th><a href="ShopServlet?command=mypage_6&id=${sessionScope.loginUser.id}" class="a_tag2">내 문의내역</a></th>
+				<th><a href="ShopServlet?command=mypage_1" class="a_tag2">구매내역</a></th>
+				<th><a href="ShopServlet?command=mypage3_1_moveAction" class="a_tag2">회원정보</a></th>
+				<th><a href="ShopServlet?command=mypage_5" class="a_tag2">내 구매후기</a></th>
+				<th><a href="ShopServlet?command=mypage_6" class="a_tag2">내 문의내역</a></th>
 		</table>
-		</div>
+		</div> --%>
 		<div id="product_info">
 		<hr style="width:1200px; float:left;">
 		<table style="border-collapse:collapse;" id="product_info_table">

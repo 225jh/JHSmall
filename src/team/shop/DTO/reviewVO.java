@@ -11,8 +11,16 @@ public class reviewVO {
 	private int rNum;
 	private String content;
 	private String rImg;
+	private String rReply;
 	private Timestamp rDate;
 	
+
+	public String getrReply() {
+		return rReply;
+	}
+	public void setrReply(String rReply) {
+		this.rReply = rReply;
+	}
 	public String getpName() {
 		return pName;
 	}

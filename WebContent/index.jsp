@@ -77,7 +77,7 @@ color:red;
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="include/header.jsp"></jsp:include>
 			</div>
 
 			<div id="banner">
@@ -88,30 +88,32 @@ color:red;
 
 			<div id="a_container">
 				<div class="product">
-				<a href="ShopServlet?command=product_detail&pNum=23" class="a_tag2">
+				<a href="ShopServlet?command=product_detail&pNum=3" class="a_tag2">
 					<img class="product"
-						src="https://image.msscdn.net/images/goods_img/20220105/2293208/2293208_2_125.jpg">
+						src="images/product_images/jean.jpg">
+						<!-- https://image.msscdn.net/images/goods_img/20220105/2293208/2293208_2_125.jpg" -->
 					가디건
 					</a>
 				</div>
 
 				<div class="product">
-				<a href="ShopServlet?command=product_detail&pNum=24" class="a_tag2">
+				<a href="ShopServlet?command=product_detail&pNum=4" class="a_tag2">
 					<img class="product"
 						src="https://image.msscdn.net/images/goods_img/20210817/2066200/2066200_4_125.jpg">
 						후드집업</a>
 						  
 						
+						
 				</div>
 				<div class="product">
-				<a href="ShopServlet?command=product_detail&pNum=25" class="a_tag2">
+				<a href="ShopServlet?command=product_detail&pNum=64" class="a_tag2">
 					<img class="product"
 						src="https://image.msscdn.net/images/goods_img/20210401/1875010/1875010_1_500.jpg?t=20210401143848">
 					킹받는 열쇠고리
 					</a>
 				</div>
 				<div class="product">
-				<a href="ShopServlet?command=product_detail&pNum=26" class="a_tag2">
+				<a href="ShopServlet?command=product_detail&pNum=62" class="a_tag2">
 					<img class="product"
 						src="https://image.msscdn.net/images/goods_img/20220126/2330146/2330146_2_500.jpg?t=20220213195344">
 					썬구리

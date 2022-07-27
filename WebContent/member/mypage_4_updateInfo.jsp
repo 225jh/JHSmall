@@ -35,21 +35,6 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
-
-#mypage_div {
-	position: absolute;
-	left: 600px;
-	border: 1px solid black;
-	width: 900px;
-	height: 80px;
-	text-align: left;
-}
-
-#mypage_span {
-	font-size: 30px;
-	font-weight: bold;
-}
-
 #big {
 	min-height: 100%;
 	position: relative;
@@ -58,33 +43,6 @@ html, body {
 #small {
 	padding-bottom: 200px; /* footer의 높이 */
 }
-
-#mypage_table_div {
-	margin-top: 83px;
-	margin-left: 597px;
-	border-collapse: collapse;
-	color: gray;
-	width: 330px;
-}
-#mypage_table{
-position:absolute;
-left:600px;
-top:275px;
-border-collapse:collapse;
-border:1px solid gray;
-color:gray;
-margin-top:10px;
-}
-
-#mypage_table th:hover {
-	background: black;
-	color: white;
-}
-
-#mypage_table th {
-	border: 1px solid gray;
-}
-
 #wrapper {
 	display: table;
 	margin-left: 30%;
@@ -114,24 +72,26 @@ color:white;
 	<form name="frm" method="post" action="ShopServlet?command=mypage4_1_updateAction">
 		<div id="big">
 			<div id="small">
-				<div id="header">
-					<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
-				</div>
-				<div id="mypage_div">
+					<jsp:include page="../include/header.jsp"/>
+				
+				<jsp:include page="../include/nav_mypage.jsp"/>
+				
+				<%-- <div id="mypage_div">
+				<hr size="2" style="color:lightgray">
 					<br>
 					<span id="mypage_span">마이페이지 </span>&nbsp;&nbsp;&nbsp; 홍길동 회원님을 위한
 					마이페이지 입니다.
 				</div>
-				<!-- mypage div -->
+				mypage div
 				<div id="mypage_table_div">
 					<table id="mypage_table">
 						<tr>
-				<th><a href="ShopServlet?command=mypage_1&id=${sessionScope.loginUser.id}" class="a_tag2">구매내역</a></th>
-				<th><a href="ShopServlet?command=mypage3_1_moveAction&id=${sessionScope.loginUser.id}" class="a_tag2">회원정보</a></th>
-				<th><a href="ShopServlet?command=mypage_5&id=${sessionScope.loginUser.id}" class="a_tag2">내 구매후기</a></th>
-				<th><a href="ShopServlet?command=mypage_6&id=${sessionScope.loginUser.id}" class="a_tag2">내 문의내역</a></th>
+				<th><a href="ShopServlet?command=mypage_1" class="a_tag2">구매내역</a></th>
+				<th><a href="ShopServlet?command=mypage3_1_moveAction" class="a_tag2">회원정보</a></th>
+				<th><a href="ShopServlet?command=mypage_5" class="a_tag2">내 구매후기</a></th>
+				<th><a href="ShopServlet?command=mypage_6" class="a_tag2">내 문의내역</a></th>
 					</table>
-				</div>
+				</div> --%>
 				<br>
 				<div id="wrapper">
 

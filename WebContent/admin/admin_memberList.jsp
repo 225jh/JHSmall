@@ -17,7 +17,8 @@ html, body {
 	position: relative;
 }
 #small {
-	padding-bottom: 200px; /* footer의 높이 */
+	padding-bottom: 200px; 
+	margin-left:30%;/* footer의 높이 */
 }
 #product_Info {
 	padding-top: 50px;
@@ -32,15 +33,21 @@ html, body {
 	height: 200px;
 	text-align: center;
 }
+#input{
+font-size: 16px;
+width:325px;
+padding:5px;
+border:0px;
+outline:none;
+float:left;
+}
 </style>
 </head>
 <body>
+<jsp:include page="../include/admin_header.jsp"/>
 	<form method="post" action="ShopServlet">
 		<input type="hidden" name="command" value="admin_memberListsearch">
-		<div id="search">
-			<input id="input" type="search" placeholder="검색어 입력" name="search">
-			<button id="input_but" type="submit">검색</button>
-		</div>
+		
 		<div id="big">
 			<div id="small">
 				<!-- header -->
@@ -48,9 +55,13 @@ html, body {
 
 				<br> <br> <br> <br> <br> <br>
 				<div id="client_Info">
+				<div id="search">
+			<input id="input" type="search" placeholder="검색ID 입력" name="search">
+			<button id="input_but" type="submit">검색</button>
+		</div>
 					<table id="client_info_table">
 						<tr style="background: skyblue">
-							<th colspan="2">ID</th>
+							<th>ID</th>
 							<th>이름</th>
 							<th>관리</th>
 						</tr>

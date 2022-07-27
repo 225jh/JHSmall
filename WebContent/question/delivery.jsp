@@ -63,7 +63,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 	<div id="a_container">
 				<aside id="aside">
@@ -112,18 +112,18 @@ p {
 					<br>
 					<details>
 						<summary>
-							<b>Q : </b>배송문의 질문1
+							<b>Q : </b>배송 상품은 언제 배송 되나요?
 						</summary>
 						<p>
-							<b>A : </b>배송문의 답변2
+							<b>A : </b>배송은 브랜드마다 일정이 다르고 평일 기준으로 출고 됩니다.
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>배송문의 질문2
+							<b>Q : </b>배송 조회는 어떻게 하나요?
 						</summary>
 						<p>
-							<b>A : </b>>배송문의 답변2
+							<b>A : </b>>배송조회 메뉴에서 배송진행 상황을 확인할 수 있습니다.
 						</p>
 					</details>
 				</article>

@@ -50,7 +50,7 @@ color:red;
 <div id="p_container_footer">
 	<div id="container">
 		<div id="group1">
-		<span style="font-size:30px"><b><a href="ShopServlet?command=index" class="a_tag3">1조 쇼핑몰</a></b></span>
+		<span style="font-size:30px"><b><a href="ShopServlet?command=index" class="a_tag3">JHS Mall</a></b></span>
 		<hr>
 		<span style="font-size:15px">BRANDHISTORY AS안내 FAQ 이용약관
 		개인정보취급방침 SITEMAP</span>

@@ -8,7 +8,7 @@
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 function join_check(){	
-	var frmm = document.frm;
+	var frmm = document.joinForm;
 	
 	if(frmm.name.value.length == 0){
 		alert("이름을 입력하세요.");
@@ -18,6 +18,10 @@ function join_check(){
 		alert("아이디를 입력하세요.");
 		frmm.id.focus();
 		return false;
+	}else if(frmm.idDuplication.value != "idCheck"){
+		alert("아이디 중복체크를 해주세요.");
+		frmm.id.focus();
+		return false;	
 	}else if(frmm.pw.value.length == 0){
 		alert("비밀번호를 입력하세요.");
 		frmm.pw.focus();
@@ -44,6 +48,25 @@ function join_check(){
 		return false;
 	}else
 		return true;
+}
+function fn_dbCheckId(){
+	var frmm = document.joinForm;
+	var id = frmm.id.value;
+	if(id.length==0 || id==""){
+		alert("아이디를 입력해주세요.");
+		frmm.id.focus();
+	}else{
+		window.open("ShopServlet?command=id_check&id="+id,"","width=500, height=300");
+	}
+}
+function inputIdChk(){
+	var joinForm = document.joinForm;
+	var dbCheckId = document.joinForm.dbCheckId;
+	
+	joinForm.idDuplication.value = "idUncheck";
+	dbCheckId.disabled=false; //비활성화를 활성화로...
+	dbCheckId.style.opacity=1; //투명도
+	dbCheckId.style.cursor="pointer";
 }
 </script>
 <style>
@@ -102,20 +125,24 @@ hr {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<br> <br> <br> <br> <br>
 			<div id="join">
 				<span style="font-size: 25px">회원가입</span>
 			</div>
 			<hr>
-	<form name="frm" method="post" action="ShopServlet?command=join">
+	<form name="joinForm" method="post" action="ShopServlet?command=join">
 			<div id="name">
 				이름 <input type="text" name="name">
 			</div>
 			<br>
-			<div id="id">
-				아이디 <input type="text" name="id">
+			<div id="id">                        <!-- 중복체크 후 다른아이디로 변경하여 입력하였을 때 다시 중복체크 하기위해 onkeydown함수 사용 -->
+				아이디 <input type="text" name="id" onkeydown="inputIdChk()"/>
+				<button type="button" onclick="fn_dbCheckId()" name="dbCheckId">중복확인</button>
+				
+				<!-- 아이디 중복 체크 여부 : 안했으면 회원가입 불가 -->
+				<input type="hidden" name="idDuplication" value="idUncheck"/>
 			</div>
 			<br>
 			<div id="pw">
@@ -186,6 +213,7 @@ hr {
 													.focus(); //상세입력 포커싱
 										}
 									}).open();
+	
 						});
 	}
 </script>

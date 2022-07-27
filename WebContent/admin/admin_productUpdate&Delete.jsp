@@ -16,8 +16,8 @@ position:relative;
 min-height:100%;
 }
 #small{
-margin-left:180px;
 padding-bottom:200px;
+padding-top: 100px;
 }
 .product_img{
 padding-left:670px;
@@ -55,6 +55,7 @@ margin-left:610px;
 	<div id="product_detail">
 	상품명 : <input type="text" name="pName" value="${product.pName}">
 	가격  : <input type="text" name="pPrice" value="${product.pPrice}">
+	
 	</div>
 	<br><br>
 		

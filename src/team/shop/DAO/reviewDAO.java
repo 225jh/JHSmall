@@ -40,10 +40,9 @@ public class reviewDAO {
 				//pVo.setrNum(rs.getInt("rNum"));
 				pVo.setContent(rs.getString("content"));
 				pVo.setrImg(rs.getString("rImg"));
+				pVo.setrReply(rs.getString("rReply"));
 				pVo.setrDate(rs.getTimestamp("rDate"));
-				
-				
-			
+						
 				reviewList.add(pVo);
 			}
 		} catch (Exception e) {
@@ -81,7 +80,7 @@ public class reviewDAO {
 	
 	public ArrayList<reviewVO> listMyreview(String id) {
 		ArrayList<reviewVO> list = new ArrayList<reviewVO>();
-		String sql = "select * from mypage5_view where id = ?";
+		String sql = "select * from mypage5_view where id = ? order by rDate desc";
 		
 		reviewVO rVo = null;
 		Connection conn = null;
@@ -102,6 +101,7 @@ public class reviewDAO {
 				rVo.setId(rs.getString("id"));
 				rVo.setContent(rs.getString("content"));
 				rVo.setpImg(rs.getString("pImg"));
+				rVo.setrReply(rs.getString("rReply"));
 				rVo.setrDate(rs.getTimestamp("rDate"));
 							
 				list.add(rVo);
@@ -157,6 +157,7 @@ public class reviewDAO {
 				pVo.setrNum(rs.getInt("rNum"));
 				pVo.setContent(rs.getString("content"));
 				pVo.setrImg(rs.getString("rImg"));
+				pVo.setrReply(rs.getString("rReply"));
 				pVo.setrDate(rs.getTimestamp("rDate"));
 				
 				reviewList.add(pVo);
@@ -167,6 +168,28 @@ public class reviewDAO {
 			DBManager.close(conn, pstmt, rs);
 		}
 		return reviewList;
+	}
+
+	public void reviewReplyUpdate(int rNum, String rReply) {
+		String sql = "update review set rReply=? where rNum=?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, rReply);
+			pstmt.setInt(2, rNum);
+
+			pstmt.executeUpdate();
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
 	}
 }
 

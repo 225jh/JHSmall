@@ -84,7 +84,7 @@ td {
 </head>
 <body>
 	<div id="big">
-	<jsp:include page="../include/header_notlogin.jsp"/>
+	<jsp:include page="../include/header.jsp"/>
 	<hr>
 		<div id="small">	
 <article>
@@ -132,7 +132,7 @@ td {
 						<td><input type="text" size="50" name="rec_message"></td>
 					</tr>
 				</table>
-				
+				<br><br><br>
 				<table id="cartList">
 					<tr>
 						<th>상품명</th><th>수 량</th><th>가 격</th><th>삭 제</th>

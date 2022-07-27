@@ -53,7 +53,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<div id="a_container">
 				<aside id="aside">
@@ -102,18 +102,19 @@ p {
 					<hr style="width:1210px; float:left"><br>
 					<details>
 						<summary>
-							<b>Q : </b>주문/결제 질문1
+							<b>Q : </b>결제하는 수단에 따라 할인 이벤트가 있나요?
 						</summary>
 						<p>
-							<b>A : </b>주문/결제 답변2
+							<b>A : </b>모바일(앱/웹)에서 확인 가능합니다.
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>주문/결제 질문2
+							<b>Q : </b>사은품은 어떻게 받을 수 있나요?
 						</summary>
 						<p>
-							<b>A : </b>>주문/결제 답변2
+							<b>A : </b>사은품이 있는 상품은 주문서 작성 시 체크 박스를 선택해 주셔야
+							사은품과 함께 상품이 발송됩니다.
 						</p>
 					</details>
 				</article>

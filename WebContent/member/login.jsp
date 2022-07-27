@@ -110,7 +110,7 @@ function login_check(){
 }
 </style>
 </head>
-<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <body>
 
 <form name="frm" method="post" action="ShopServlet?command=log_in">
@@ -140,7 +140,7 @@ function login_check(){
 		<div id="pw">
 			<input id="input" type="password" name="pw" placeholder="비밀번호"><br><br>
 			<input type="submit" id="loginbut" value="로그인" onclick="return login_check()"><br><br>
-			<input type="button" id="register" value="회원가입" onclick="location='ShopServlet?command=join_form'">
+			<input type="button" id="register" value="회원가입" onclick="location='ShopServlet?command=join_contract'">
 		</div>
 
 	</div>

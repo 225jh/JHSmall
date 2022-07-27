@@ -54,7 +54,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<div id="a_container">
 				<aside id="aside">
@@ -103,18 +103,18 @@ p {
 					<hr style="width:1210px; float:left"><br>
 					<details>
 						<summary>
-							<b>Q : </b>반품문의 질문1
+							<b>Q : </b>상품을 받았는데 환불하고 싶어요.
 						</summary>
 						<p>
-							<b>A : </b>반품문의 답변2
+							<b>A : </b>환불은 배송 완료 후 7일 이내에만 가능합니다.
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>반품문의 질문2
+							<b>Q : </b>취소/반품(환불) 비용은 무료인가요?
 						</summary>
 						<p>
-							<b>A : </b>>반품문의 답변2
+							<b>A : </b>>반품 배송비는 회원님 부담으로 결제해야 교환 접수가 정상적으로 완료됩니다.
 						</p>
 					</details>
 				</article>

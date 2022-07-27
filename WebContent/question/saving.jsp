@@ -54,7 +54,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<div id="a_container">
 				<aside id="aside">
@@ -103,18 +103,19 @@ p {
 					<hr style="width:1210px; float:left"><br>
 					<details>
 						<summary>
-							<b>Q : </b>적립문의 질문1
+							<b>Q : </b>적립금에 유효기간이 있나요?
 						</summary>
 						<p>
-							<b>A : </b>적립문의 답변2
+							<b>A : </b>일반 적립금의 유효기간은 5년입니다.
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>적립문의 질문2
+							<b>Q : </b>쿠폰은 어떻게 사용하나요?
 						</summary>
 						<p>
-							<b>A : </b>>적립문의 답변2
+							<b>A : </b>>보유한 쿠폰은 주문 결제 시 적용 가능 상품 확인 및 사용이 가능합니다.
+							주문 완료 후에는 쿠폰 적용이 가능하지 않습니다.
 						</p>
 					</details>
 				</article>

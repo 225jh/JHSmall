@@ -103,7 +103,7 @@ border:1px solid black;
 <body>
 
 <div id="big">
-<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <div id="small">
 <form name="frm" method="post">
 	

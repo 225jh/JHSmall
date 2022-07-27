@@ -21,6 +21,38 @@ public class clientDAO {
 	public static clientDAO getInstance() {
 		return instance;
 	}
+	
+	public int getUserIdCheck(String id2) {
+		String sql = "select * from client where id=?";
+
+		clientVO cVo = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		int result = 0;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id2);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				cVo = new clientVO();
+
+				cVo.setId(rs.getString("id"));
+			}
+			if(cVo.getId() != null) {
+				result = 1;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return result;
+	}
 
 	public clientVO getUser(String id2) {
 		String sql = "select * from client where id=?";

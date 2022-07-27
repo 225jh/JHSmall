@@ -54,7 +54,7 @@ p {
 	<div id="big">
 		<div id="small">
 			<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 			<div id="a_container">
 				<aside id="aside">
@@ -102,18 +102,20 @@ p {
 					<hr style="width:1210px; float:left"><br>
 					<details>
 						<summary>
-							<b>Q : </b>상품문의 질문1
+							<b>Q : </b>재고가 없어요. 언제쯤 구입할 수 있을까요?
 						</summary>
 						<p>
-							<b>A : </b>상품문의 답변2
+							<b>A : </b>품절 상품 재입고 여부 및 일정은 정확한 확인이 가능하지 않지만
+							재입고 알림을 등록하면 알림톡으로 확인 할 수 있습니다.모바일(앱):상품 선택>구매하기>재입고 알림 받기 선택
 						</p>
 					</details>
 					<details>
 						<summary>
-							<b>Q : </b>상품문의 질문2
+							<b>Q : </b>구매했을 때 보다 가격이 떨어졌어요 차액 환불이 되나요?
 						</summary>
 						<p>
-							<b>A : </b>>상품문의 답변2
+							<b>A : </b>>상품 금액은 온라인 판매처 특성상 유동적으로 변동될 수 있어 차액
+							환불은 가능하지 않습니다.
 						</p>
 					</details>
 				</article>

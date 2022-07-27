@@ -49,7 +49,7 @@ text-align:center;
 	<div id="big">
 		<!-- 내용물 및 푸터를 감싸는 div -->
 					<div id="header">
-				<jsp:include page="../include/header_notlogin.jsp"></jsp:include>
+				<jsp:include page="../include/header.jsp"></jsp:include>
 			</div>
 		<div id="small">
 			<!-- 내용물을 감싸는 div -->

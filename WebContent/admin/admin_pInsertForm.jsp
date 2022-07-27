@@ -5,8 +5,17 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
+<style>
+#small {
+	padding-bottom: 200px; 
+	margin-left:30%;
+	padding-top : 100px;
+}
+</style>
 </head>
 <body>
+<jsp:include page="../include/admin_header.jsp"/>
+<div id = small>
 <form name="frm" method="post" action="ShopServlet?command=admin_pInsert">
 	
 	<div id="product_detail">
@@ -22,5 +31,6 @@
 	<input id="purchase_button" type="submit" value="상품 등록"/>
 	</div>
 </form>
+</div>
 </body>
 </html>

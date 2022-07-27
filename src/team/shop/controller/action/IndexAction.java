@@ -18,7 +18,6 @@ public class IndexAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "index.jsp";
-		System.out.println("인덱스 들렸따 왔음!");
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
