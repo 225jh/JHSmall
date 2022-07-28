@@ -22,7 +22,7 @@ html, body {
 }
 
 #small {
-	margin-left:500px;
+	margin-left:350px;
 	padding-bottom: 200px; /* footer의 높이 */
 }
 
@@ -49,36 +49,36 @@ color:black;
 color:red;
 }
 #order_btn{
-width:100px;
-height:30px;
-background:black;
+width:300px;
+height:40px;
+background:darkblue;
 color:white;
-margin-left:1050px;
+margin-left:450px;
 }
 table {
 	border-collapse: collapse;
 	padding: 5px;
 	text-align: center;
 }
-
 tr {
 	text-align: center;
 }
-
 td {
 	padding: 10px;
 	text-align: left;
 }
-
 /* class */
 .co {
-	background-color: #ffdab9;
+	text-align:center;
+	background-color: black;
+	color:white;
 }
 .top {
 	border: 1px solid;
 	}
 #wid {
-	width: 150px;
+	
+	width: 100px;
 }
 </style>
 </head>
@@ -88,9 +88,11 @@ td {
 	<hr>
 		<div id="small">	
 <article>
+	
 	<h2>장바구니</h2>
 	<form name="formm" method="post" action="ShopServlet">
 	<input type="hidden" name="command" value="cart_payment"/>
+	
 		<c:choose>
 			<c:when test="${cartList.size() == 0}">
 				<div id="cart_null">장바구니가 비었습니다.</div>
@@ -119,7 +121,7 @@ td {
 						<td><input type="text" name="rec_phone" value="${sessionScope.loginUser.phone}"></td>
 					</tr>
 					<tr>
-						<td class="co">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
+						<td class="co">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
 						<td><input type="text" id="address_kakao" name="rec_address1"
 							readonly /></td>
 					</tr>
@@ -132,6 +134,7 @@ td {
 						<td><input type="text" size="50" name="rec_message"></td>
 					</tr>
 				</table>
+				
 				<br><br><br>
 				<table id="cartList">
 					<tr>

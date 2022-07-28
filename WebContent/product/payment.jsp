@@ -42,18 +42,24 @@ td {
 
 /* class */
 .co {
-	background-color: #ffdab9;
-}
-
-.button {
+	text-align:center;
 	background-color:black;
-	color: #FFFFFF;
+	color:white;
+}
+.co2 {
+	text-align:center;
+	background-color:lightgray;
+}
+.button {
+	background-color:darkblue;
+	color:white;
 	width: 200px;
 	margin: auto;
 	display: inline-block;
 }
 
 .top {
+	width:400px;
 	border: 1px solid;
 }
 
@@ -65,7 +71,7 @@ td {
 }
 
 #wid {
-	width: 150px;
+	width: 100px;
 }
 
 #p_container {
@@ -109,7 +115,7 @@ td {
 						<td><input type="text" name="rec_phone" value="${sessionScope.loginUser.phone}"></td>
 					</tr>
 					<tr>
-						<td class="co">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
+						<td class="co">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
 						<td><input type="text" id="address_kakao" name="rec_address1"
 							readonly /></td>
 					</tr>
@@ -126,11 +132,11 @@ td {
 				<table id="info_tab" class="top">
 					<thead>
 						<tr>
-							<th class="co">상품가격</th>
-							<th class="co">수 &nbsp;&nbsp;&nbsp;량</th>
-							<th class="co">결제금액</th>
-							<th class="co">배송비</th>
-							<th class="co">총 결제금액</th>
+							<th class="co2">상품가격</th>
+							<th class="co2">수 &nbsp;&nbsp;&nbsp;량</th>
+							<th class="co2">결제금액</th>
+							<th class="co2">배송비</th>
+							<th class="co2">총 결제금액</th>
 						</tr>
 						<tr>
 							<td style="text-align: center"><fmt:formatNumber value="${param.pPrice}" type="currency"/></td>

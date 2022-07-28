@@ -1,5 +1,3 @@
-delete from product;
-
 select * from product;
 
 insert into product values(pNum_seq.nextval, '블루종', 80000, 'https://image.msscdn.net/images/goods_img/20201117/1692628/1692628_5_125.jpg',
@@ -25,10 +23,7 @@ insert into product values(pNum_seq.nextval, '플리스', 85000, 'https://image.
 
 insert into product values(pNum_seq.nextval, '아노락', 90000, 'https://image.msscdn.net/images/goods_img/20200414/1404195/1404195_1_125.jpg
  ', '아노락', '아노 와타시', 'outer1');
-
-select * from product;
-delete from product;
-
+ 
 insert into product values(pNum_seq.nextval, '얄레 티샤스', 45000, ' https://image.msscdn.net/images/goods_img/20210312/1841764/1841764_3_125.jpg',
 'Yale, 반팔티샤스', '예븐 얄레 티샤스 레쓰고.', 'top2'); --상품번호, 이름, 가격, 이미지주소, 간략설명, 상세설명, 카테고리명
 
@@ -56,10 +51,6 @@ insert into product values(pNum_seq.nextval, '반팔 셔츠', 15000, 'https://im
 insert into product values(pNum_seq.nextval, '긴팔 셔츠', 30000, 'https://image.msscdn.net/images/goods_img/20190812/1116117/1116117_4_125.jpg',
 '가벼운 긴팔, 오우펴네', '빤스위에 하나만 입은너낌.', 'top2');
 
-select * from product;
-delete from product;
-
-
 insert into product values(pNum_seq.nextval, '데님 팬츠', 55000, 'https://image.msscdn.net/images/goods_img/20160818/396185/396185_3_125.jpg',
 '데님 팬츠', '우헤헤', 'pants3');
 
@@ -83,9 +74,6 @@ insert into product values(pNum_seq.nextval, '숏팬츠', 25000, 'https://image.
 
 insert into product values(pNum_seq.nextval, '와이드팬츠', 30000, 'https://image.msscdn.net/images/goods_img/20220704/2646339/2646339_1_125.jpg',
 '와이드팬츠', '너무 넓다', 'pants3');
-
-select * from product;
-delete from product;
 
 insert into product values(pNum_seq.nextval, '나이키 반팔', 30000, 'https://image.msscdn.net/images/prd_img/20200217/1308001/detail_1308001_1_500.jpg',
 '나이키', '기능성 반팔', 'training4');
@@ -111,9 +99,6 @@ insert into product values(pNum_seq.nextval, '데상트 바지', 30000, 'https:/
 insert into product values(pNum_seq.nextval, '에프씨엠엠 바지', 30000, 'https://image.msscdn.net/images/goods_img/20211101/2209689/2209689_1_500.jpg?t=20220628164936',
 '에프씨엠엠', '트레이닝 바지', 'training4');
 
-select * from product;
-delete from product;
-
 insert into product values(pNum_seq.nextval, '쪼리', 30000, 'https://image.msscdn.net/images/goods_img/20210428/1926895/1926895_2_500.jpg?t=20220510163120',
 '플립플랍', '플립플랍 쪼리', 'shoes5');
 
@@ -137,11 +122,6 @@ insert into product values(pNum_seq.nextval, '레인부츠', 75000, 'https://ima
 
 insert into product values(pNum_seq.nextval, '슬리퍼', 30000, 'https://image.msscdn.net/images/goods_img/20220510/2547874/2547874_4_500.jpg?t=20220510114338',
 '코닥', '슬리퍼', 'shoes5');
-
-select * from product;
-delete from product;
-
-
 
 insert into product values(pNum_seq.nextval, '안경', 30000, 'https://image.msscdn.net/images/goods_img/20191004/1176399/1176399_1_500.jpg?t=20191004120620',
 '앤경', 'fㅐ션앤경', 'acc6'); --상품번호, 이름, 가격, 이미지주소, 간략설명, 상세설명, 카테고리명

@@ -42,7 +42,7 @@ float:left;
 }
 #input_but{
 width:50px;
-height:28px;
+height:32px;
 border:0px;
 background:gray;
 outline:none;

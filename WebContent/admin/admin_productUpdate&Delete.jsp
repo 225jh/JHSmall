@@ -25,13 +25,13 @@ width:300px;
 height:270px;
 }
 #product_detail{
-margin-left:610px;
+margin-left:650px;
+}
+#p_info{
+margin-left:650px;
 }
 .but{
 margin-left:720px;
-}
-#p_info{
-margin-left:610px;
 }
 </style>
 </head>
@@ -57,9 +57,9 @@ margin-left:610px;
 	가격  : <input type="text" name="pPrice" value="${product.pPrice}">
 	
 	</div>
-	<br><br>
-		
-		<span style="margin-left:610px;">상세정보</span>
+	<br>
+	<span style="margin-left:610px;">상세정보</span>
+	<br><br>		
 		<textarea id="p_info" name="pDetailInfo" style="width:500px; height:300px;">${product.pDetailInfo}</textarea>
 	</form>
 	</div>

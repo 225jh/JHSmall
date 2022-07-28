@@ -22,17 +22,6 @@ html, body {
 #small {
 	padding-bottom: 200px; /* footer의 높이 */
 }
-#mypage_div{
-border:1px solid black;
-width:900px;
-height:80px;
-text-align:left;
-
-}
-#mypage_span{
-font-size:30px;
-font-weight:bold;
-}
 #big {
 	min-height: 100%;
 	position: relative;
@@ -40,24 +29,6 @@ font-weight:bold;
 
 #small {
 	padding-bottom: 200px; /* footer의 높이 */
-}
-
-#mypage_div{
-margin-left:500px;
-}
-#mypage_table{
-margin-left:500px;
-border-collapse:collapse;
-}
-#product_info{
-margin-left:500px;
-}
-#mypage_table th {
-border: 1px solid gray;
-}
-#mypage_table th:hover {
-	background: black;
-	color: white;
 }
 .a_tag2{
 text-decoration:none;
@@ -67,9 +38,12 @@ color:black;
 background:black;
 color:white;
 }
-#product_info_table{
-width:1200px;
-height:130px;
+#product_info_table {
+	border-bottom: 1px solid black;
+	width: 900px;
+	height: 130px;
+	margin-left: 500px;
+	margin-top : 20px;
 }
 #product_info_table td{
 height:200px;
@@ -102,9 +76,9 @@ border-bottom:1px solid black
 		</table>
 		</div> --%>
 		<div id="product_info">
-		<hr style="width:1200px; float:left;">
+		<hr style="width:950px; float:center;">
 		<table style="border-collapse:collapse;" id="product_info_table">
-			<tr style="background:lightblue">
+			<tr style="background:black; color:white">
 				<th>주문번호(주문일)</th>
 				<th>Image</th>
 				<th>상품명(상품번호) / 간략설명</th>

@@ -19,10 +19,13 @@
 			document.frm.email.focus();
 		} else if (document.frm.phone.value == "") {
 			alert("연락처를 입력해 주세요.");
-			document.frm.email.focus();
-		} else if (document.frm.address.value == "") {
+			document.frm.phone.focus();
+		} else if (document.frm.address1.value == "") {
 			alert("주소를 입력해 주세요.");
-			document.frm.email.focus();
+			document.frm.address1.focus();
+		} else if (document.frm.address2.value == "") {
+			alert("상세주소를 입력해 주세요.");
+			document.frm.address2.focus();
 		} else {
 			document.frm.action = "ShopServlet?command=admin_memberDetailUpdate&id=${client.id}";
 			document.frm.submit();
@@ -104,8 +107,7 @@ html, body {
 <jsp:include page="../include/admin_header.jsp"/>
 <div id = small>
 
-	<form name="frm" method="post"
-		action="ShopServlet?command=admin_memberDetailUpdate">
+	<form name="frm" method="post">
 
 
 		<div id="main">
@@ -151,13 +153,13 @@ html, body {
 			</div>
 			<br>
 			<div id="address">
-				주소 <input type="text" id="address_kakao" name="address"
-					style="margin-left: 73px; width: 300px;" value="${client.address}" />
+				주소 <input type="text" id="address_kakao" name="address1"
+					style="margin-left: 73px; width: 300px;" value="${client.address1}" />
 			</div>
 			<br>
 			<div id="address_detail">
-				상세주소 <input type="text" name="address_detail"
-					style="margin-left: 41px" />
+				상세주소 <input type="text" name="address2"
+					style="margin-left: 41px" value="${client.address2}"/>
 			</div>
 		</div>
 		<br> <br>
@@ -184,7 +186,7 @@ html, body {
 													.getElementById("address_kakao").value = data.address; // 주소 넣기
 											document
 													.querySelector(
-															"input[name=address_detail]")
+															"input[name=address2]")
 													.focus(); //상세입력 포커싱
 										}
 									}).open();

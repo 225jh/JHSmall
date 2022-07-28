@@ -26,7 +26,8 @@ public class admin_memberDetailUpdateAction implements Action {
 	
 		cVo2.setPw(request.getParameter("password"));
 		cVo2.setEmail(request.getParameter("email"));
-		cVo2.setAddress(request.getParameter("address"));
+		cVo2.setAddress1(request.getParameter("address1"));
+		cVo2.setAddress2(request.getParameter("address2"));
 		cVo2.setPhone(request.getParameter("phone"));
 		
 		

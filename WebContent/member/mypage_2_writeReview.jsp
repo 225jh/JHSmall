@@ -20,12 +20,10 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
-
 #big {
 	min-height: 100%;
 	position: relative;
 }
-
 #small {
 	padding-bottom: 200px; /* footer의 높이 */
 }
@@ -34,17 +32,20 @@ html, body {
 	text-align: center;
 	border: 1px solid gray;
 }
-
 #product_Info {
-width:1010px;
+	width: 1010px;
 	padding-top: 50px;
-	margin : 0 auto;
+	margin: 0 auto;
 }
-.img{
-width:150px;
-height:150px;
+.img {
+	width: 150px;
+	height: 150px;
 }
-</style> 
+b1{
+	font-size : 30px;
+	font-weight : bold;
+}
+</style>
 </head>
 <body>
 	<div id="big">

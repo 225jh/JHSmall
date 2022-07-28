@@ -75,7 +75,8 @@ public class clientDAO {
 				cVo.setPw(rs.getString("pw"));
 				cVo.setName(rs.getString("name"));
 				cVo.setEmail(rs.getString("email"));
-				cVo.setAddress(rs.getString("address"));
+				cVo.setAddress1(rs.getString("address1"));
+				cVo.setAddress2(rs.getString("address2"));
 				cVo.setPhone(rs.getString("phone"));
 			}
 		} catch (Exception e) {
@@ -88,7 +89,7 @@ public class clientDAO {
 
 	public void insertClient(clientVO cVo) {
 
-		String sql = "insert into client values(?,?,?,?,?,?)";
+		String sql = "insert into client values(?,?,?,?,?,?,?)";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -101,8 +102,9 @@ public class clientDAO {
 			pstmt.setString(2, cVo.getPw());
 			pstmt.setString(3, cVo.getName());
 			pstmt.setString(4, cVo.getEmail());
-			pstmt.setString(5, cVo.getAddress());
-			pstmt.setString(6, cVo.getPhone());
+			pstmt.setString(5, cVo.getAddress1());
+			pstmt.setString(6, cVo.getAddress2());
+			pstmt.setString(7, cVo.getPhone());
 
 			pstmt.executeUpdate();// 쿼리문 실행
 
@@ -116,7 +118,7 @@ public class clientDAO {
 
 	public void updateClient(String id, clientVO cVo2) {
 
-		String sql = "update client set pw=?, email=?, address=?, phone=? where id=?";
+		String sql = "update client set pw=?, email=?, address1=?, address2=?, phone=? where id=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -127,9 +129,10 @@ public class clientDAO {
 
 			pstmt.setString(1, cVo2.getPw());
 			pstmt.setString(2, cVo2.getEmail());
-			pstmt.setString(3, cVo2.getAddress());
-			pstmt.setString(4, cVo2.getPhone());
-			pstmt.setString(5, id);
+			pstmt.setString(3, cVo2.getAddress1());
+			pstmt.setString(4, cVo2.getAddress2());
+			pstmt.setString(5, cVo2.getPhone());
+			pstmt.setString(6, id);
 
 			pstmt.executeUpdate();// 쿼리문 실행
 
@@ -194,7 +197,8 @@ public class clientDAO {
 				cVO.setPw(rs.getString("pw"));
 				cVO.setName(rs.getString("name"));
 				cVO.setEmail(rs.getString("email"));
-				cVO.setAddress(rs.getString("address"));
+				cVO.setAddress1(rs.getString("address1"));
+				cVO.setAddress2(rs.getString("address2"));
 				cVO.setPhone(rs.getString("phone"));
 			}
 		} catch (Exception e) {
@@ -253,7 +257,8 @@ public void DeleteUser(String id) {
 				cVO.setPw(rs.getString("pw"));
 				cVO.setName(rs.getString("name"));
 				cVO.setEmail(rs.getString("email"));
-				cVO.setAddress(rs.getString("address"));
+				cVO.setAddress1(rs.getString("address1"));
+				cVO.setAddress2(rs.getString("address2"));
 				cVO.setPhone(rs.getString("phone"));
 			list.add(cVO);
 		}

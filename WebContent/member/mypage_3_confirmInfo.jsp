@@ -100,9 +100,9 @@ color:white;
 				<th><a href="ShopServlet?command=mypage_6" class="a_tag2">내 문의내역</a></th>
 		</table>
 		</div> --%>
-		
+			<br><br><br><br>
 			<div id="login1">
-				<b>본인확인</b>
+				<b>본인확인</b><br><br>
 			</div>
 			<div id="login2">
 				회원님의 정보를 안전하게 보호하기 위해 비밀번호를 한번 더 입력해주세요.

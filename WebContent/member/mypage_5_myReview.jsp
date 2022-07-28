@@ -13,75 +13,53 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
-
 #big {
 	min-height: 100%;
 	position: relative;
 }
-
 #small {
 	padding-bottom: 200px; /* footer의 높이 */
 }
-
-#product_Info {
-	padding:0;
-	margin-left: 31%;
-	width:930px;
+#product_info_table {
+	border-bottom: 1px solid black;
+	width: 900px;
+	height: 130px;
+	margin-left: 500px;
+	margin-top : 20px;
 }
-#product_info_table{
-border-bottom:1px solid black;
-width:900px;
-height:130px;
-left:600px;
+#product_info_table td {
+	height: 200px;
+	text-align: center;
 }
-#product_info_table td{
-height:200px;
-text-align:center;
+.img_myreview {
+	width: 150px;
+	height: 150px;
+	margin: 0;
 }
-.img_myreview{
-width:150px;
-height:150px;
-margin:0;
+.a_tag2 {
+	text-decoration: none;
+	color: black;
 }
-.a_tag2{
-text-decoration:none;
-color:black;
-}
-.a_tag2:hover{
-background:black;
-color:white;
+.a_tag2:hover {
+	background: black;
+	color: white;
 }
 </style>
 </head>
 <body>
 	<div id="big">
 		<div id="small">
-			<div id="header">
-				<jsp:include page="../include/header.jsp"></jsp:include>
-			</div><!-- header -->
-			
 
+		<jsp:include page="../include/header.jsp"></jsp:include>
 		
 		<jsp:include page="../include/nav_mypage.jsp"/>
-			<%-- <div id="mypage_div">
-			<hr size="2" style="color: lightgray">
-				<br>
-				<span id="mypage_span">마이페이지 </span>&nbsp;&nbsp;&nbsp; 
-				<b>${sessionScope.loginUser.id}(${sessionScope.loginUser.name})</b>회원님을 위한 마이페이지 입니다.
-				<table id="mypage_table">
-					<tr>
-				<th><a href="ShopServlet?command=mypage_1" class="a_tag2">구매내역</a></th>
-				<th><a href="ShopServlet?command=mypage3_1_moveAction" class="a_tag2">회원정보</a></th>
-				<th><a href="ShopServlet?command=mypage_5" class="a_tag2">내 구매후기</a></th>
-				<th><a href="ShopServlet?command=mypage_6" class="a_tag2">내 문의내역</a></th>
-				</table>
-			</div> --%>
-			<br><br><br><br><br><br>
+
+			<br><br>
 			<div id="product_Info">
 		<hr>
 		<table id="product_info_table">
 		
-			<tr style="background:skyblue">
+			<tr style="background:black; color:white">
 				<th colspan="2">상품명</th>
 				<th style="width:400px">상품평</th>
 				<th style="width:150px">작성일</th>

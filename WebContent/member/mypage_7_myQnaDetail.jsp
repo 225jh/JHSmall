@@ -39,37 +39,24 @@ background:black;
 color:white;
 }
 .p_tag{
-margin-left:530px;
+margin-left:510px;
 }
 #p_but{
-margin-left:900px;
+margin-top:50px;
+margin-left:800px;
 }
 </style>
 </head>
 <body>
-
-<%-- <input type="hidden" name="title" value="${mtmVO}"> --%>
-
 	<div id="big">
 		<div id="small">
 		
 		<!-- header -->
 		<jsp:include page="../include/header.jsp"/>
 		
-			<!-- mypage_nav -->
-			<jsp:include page="../include/nav_mypage.jsp"/>
-			
-			<%-- <div id="mypage_div">
-			<hr size="2" style="color: lightgray">
-				<br> <span id="mypage_span">마이페이지 </span>&nbsp;&nbsp;&nbsp; ${sessionScope.loginUser.id}
-				회원님을 위한 마이페이지 입니다.
-				<table id="mypage_table">
-					<tr>
-				<th><a href="ShopServlet?command=mypage_1" class="a_tag2">구매내역</a></th>
-				<th><a href="ShopServlet?command=mypage3_1_moveAction" class="a_tag2">회원정보</a></th>
-				<th><a href="ShopServlet?command=mypage_5" class="a_tag2">내 구매후기</a></th>
-				<th><a href="ShopServlet?command=mypage_6" class="a_tag2">내 문의내역</a></th>
-				</table> --%>
+		<!-- mypage_nav -->
+		<jsp:include page="../include/nav_mypage.jsp"/>
+
 		<hr style="width: 900px;">
 		<p class="p_tag">분류&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${mtm.mKind}</p>
 		<hr style="width: 900px;">
@@ -87,14 +74,10 @@ margin-left:900px;
 		</div> 
 		
 	</div><!-- mypage_div -->
-			
 	</div><!-- small -->
-		</div><!-- big -->
+</div><!-- big -->
 	<div id="footer">
 		<jsp:include page="../include/footer.jsp"></jsp:include>
 	</div>
-
-	
-
 </body>
 </html>

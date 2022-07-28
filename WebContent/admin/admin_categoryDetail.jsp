@@ -53,8 +53,27 @@ text-align:center;
 			</div>
 		<div id="small">
 			<!-- 내용물을 감싸는 div -->
+<c:choose>
+	<c:when test="${empty sessionScope.loginAdmin}">
+		<table id="CategoryList">
+	
+		<c:set var="i" value="0" />
+		<c:set var="j" value="4" />
+		  <c:forEach items="${CategoryList}" var="list">
+		    <c:if test="${i%j == 0}">
+		    <tr>
+		    </c:if>
+		       <td><div class="product">
+					<a href="ShopServlet?command=admin_loginForm"><img class="product" src="${list.pImg}"></a>
+					<br>${list.pName}</div></td>
+		    <c:if test="${i%j == j-1 }">
+		    </c:if>
+		    <c:set var="i" value="${i+1 }" />
+		  </c:forEach>
+		</table>
+		</c:when>
+<c:otherwise>
 	<table id="CategoryList">
-	<!-- jstl의 c:forEach태그로 for문 출력하기 -->
 	
 	<c:set var="i" value="0" />
 	<c:set var="j" value="4" />
@@ -70,7 +89,8 @@ text-align:center;
 	    <c:set var="i" value="${i+1 }" />
 	  </c:forEach>
 	</table>
-
+</c:otherwise>
+</c:choose>
 		</div>
 		<!-- small -->
 		<div id="footer">

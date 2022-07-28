@@ -5,6 +5,7 @@ drop table product;
 drop table product_order;
 drop table review;
 drop table mtm;
+drop table cart;
 
 --Delete Table
 delete from client;
@@ -23,13 +24,15 @@ select * from product_order;
 select * from review;
 select * from mtm;
 
+
 --Table
 create table client(
 id      varchar2(100)  not null, --PK
 pw 	    varchar2(100)  not null,
 name    varchar2(100)  not null,
 email   varchar2(100)  not null,
-address varchar2(100) not null,
+address1 varchar2(100) not null,
+address2 varchar2(100) not null,
 phone   varchar2(100)  not null,
 CONSTRAINT Client_PK PRIMARY KEY(id)
 );
@@ -126,30 +129,33 @@ pNum number,
 cnt  number
 );
 
-
+--Drop sequence
 drop sequence pNum_seq;
 drop sequence oNum_seq;
 drop sequence rNum_seq;
 drop sequence mNum_seq;
 drop sequence cNum_seq;
 
---Sequence
+--Create Sequence
 create sequence pNum_seq start with 1 increment by 1;
 create sequence oNum_seq start with 1 increment by 1;
 create sequence rNum_seq start with 1 increment by 1;
 create sequence mNum_seq start with 1 increment by 1;
 create sequence cNum_seq start with 1 increment by 1;
 
---View1
+--Drop view
+drop view mypage1_view;
+drop view mypage5_view;
+drop view cart_view;
+
+--Create View
 create or replace view mypage1_view
 as
 select c.id, p.pNum, p.pName, p.pShortInfo, p.pImg, o.oNum, o.oDate, o.oPrice, o.cnt
 from CLIENT c, PRODUCT p, PRODUCT_ORDER o
 where p.pNum = o.pNum and c.id = o.id;
 
-select * from mypage1_view;
 
---View2
 create or replace view mypage5_view
 as
 select c.id, p.pNum, p.pName, p.pImg, r.content, r.rReply, r.rDate
@@ -159,12 +165,9 @@ where p.pNum = r.pNum and c.id = r.id;
 drop view mypage5_view;
 select * from mypage5_view;
 
---View3
+
 create or replace view cart_view
 as
 select ct.cNum, ct.id, ct.pNum, ct.cnt, p.pImg, p.pName, p.pPrice
 from cart ct, client c, product p 
 where ct.id = c.id and ct.pNum = p.pNum;
-
-drop view cart_view;
-select * from cart_view;

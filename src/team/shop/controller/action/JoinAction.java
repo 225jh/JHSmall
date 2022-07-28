@@ -23,8 +23,8 @@ public class JoinAction implements Action {
 		email += "@";
 		email += request.getParameter("emailDomain");
 		
-		String address = request.getParameter("address1");
-		address += " "+request.getParameter("address2");
+		String address1 = request.getParameter("address1");
+		String address2 = request.getParameter("address2");
 		
 		String phone = request.getParameter("phone");
 		
@@ -34,7 +34,8 @@ public class JoinAction implements Action {
 		cVo.setPw(pw);
 		cVo.setName(name);
 		cVo.setEmail(email);
-		cVo.setAddress(address);
+		cVo.setAddress1(address1);
+		cVo.setAddress2(address2);
 		cVo.setPhone(phone);
 		
 		clientDAO cDao = clientDAO.getInstance();

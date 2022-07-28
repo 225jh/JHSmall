@@ -26,9 +26,14 @@ html, body {
 
 
 #banner {
-margin:0 auto;
-	height: 200px;
+	position: absolute;
+	left : 200px;
+	margin: 0;
+	width: 80%;
+	height: 300px;
+	top: 210px;
 }
+
 
 #product {
 	position: absolute;
