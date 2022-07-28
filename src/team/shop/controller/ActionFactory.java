@@ -58,6 +58,7 @@ import team.shop.controller.admin.action.AdminSearch;
 import team.shop.controller.admin.action.AdminUpdateAction;
 import team.shop.controller.admin.action.AdminUpdateFormAction;
 import team.shop.controller.admin.action.Admin_mtmList_Action;
+import team.shop.controller.admin.action.AdminrReplyForm;
 import team.shop.controller.admin.action.admin_memberDeleteAction;
 import team.shop.controller.admin.action.admin_memberDetailUpdateAction;
 import team.shop.controller.admin.action.admin_memberDetailViewAction;
@@ -198,6 +199,8 @@ public class ActionFactory {
 			action = new AdminReviewCall();
 		}else if(command.equals("admin_review_delete")) {
 			action = new AdminReviewDelete();
+		}else if(command.equals("admin_rReplyForm")) {
+			action = new AdminrReplyForm();
 		}else if(command.equals("insert_rReply")) {
 			action = new AdminReviwReplyUpdate();
 		}else if(command.equals("admin_pInsertForm")) {

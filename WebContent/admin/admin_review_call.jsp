@@ -28,8 +28,8 @@ border:1px dotted black;
 <jsp:include page="../include/admin_header.jsp"/>
 <div id = small>
 
-<form method="post" action="ShopServlet">
-	<input type="hidden" name="command" value="insert_rReply">
+<form method="post">
+<!-- <input type="hidden" name="command" value="insert_rReply"> -->
 	<table id="admin_review_table">
 		<tr>
 			<th>상품번호</th>
@@ -48,8 +48,8 @@ border:1px dotted black;
 				<td><input type="text" name="rNum" value="${review.rNum}" readonly="readonly" style="border:0"></td>
 				<td>${review.content}</td>
 				<td><img src="${review.rImg}">이미지</td>			
-				<td><input type="text" name="rReply" value="${review.rReply}"><br>
-					<input type="submit" value="댓글 저장">
+				<td><input type="text" name="rReply" value="${review.rReply}" style="border:0" readonly ><br>
+					<a href="ShopServlet?command=admin_rReplyForm&rNum=${review.rNum}"><button type="button">댓글 달기</button></a></td>
 				<td><fmt:formatDate value="${review.rDate}" /></td>
 				<td class="td"><a
 					href="ShopServlet?command=admin_review_delete&rNum=${review.rNum}"

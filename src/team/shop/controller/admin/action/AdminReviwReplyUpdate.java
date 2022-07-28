@@ -17,7 +17,8 @@ public class AdminReviwReplyUpdate implements Action {
 		
 		int rNum = Integer.parseInt(request.getParameter("rNum"));
 		String rReply = request.getParameter("rReply");
-		
+		System.out.println(rNum);
+		System.out.println(rReply);
 		reviewDAO reviewDao = reviewDAO.getInstance();
 		reviewDao.reviewReplyUpdate(rNum,rReply);
 		
