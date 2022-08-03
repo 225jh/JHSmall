@@ -79,6 +79,7 @@ ON DELETE CASCADE
 );
 
 select * from review;
+
 create table review(
 pNum       number       , --FK : product(pNum)
 id         varchar2(100), --FK : client(id)
@@ -106,6 +107,7 @@ ON DELETE CASCADE
 SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'review';
 
 select * from mtm;
+
 create table mtm(
 id      varchar2(15)   , --FK : client(id)
 mNum    number         not null,

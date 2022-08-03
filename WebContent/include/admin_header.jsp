@@ -59,7 +59,7 @@ top:40px;
 #category_container{
 position:absolute;
 right:300px;
-top:100px;
+top:130px;
 }
 .mypage{
 position:absolute;
@@ -76,19 +76,8 @@ top:30px;
 }
 #category_table{
 margin-left:570px;
-border-spacing:10px;
 text-align:center;
 width:800px;
-}
-#category_table td{
-width:100px;
-height:50px;
-margin-right:20px;
-border:1px solid lightgray;
-
-}
-#category_table th{
-border:1px solid lightgray;
 }
 img{
 width:100%;
@@ -100,11 +89,12 @@ width:100%;
 height:100%;
 border-radius : 70%;
 }
-.a_tag3{
+.a_tag{
+size:30px;
 text-decoration:none;
 color:black;
 }
-.a_tag3:hover{
+.a_tag:hover{
 color:red;
 }
 ul li{
@@ -117,7 +107,7 @@ font-size:30px;
 <input type="hidden" name="command" value="admin_search">
 
 <div id="p_container_header">
-	<a href="ShopServlet?command=admin_main" class="a_tag3" style="font-size:40px;"><b>관리자 홈으로</b></a>
+	<a href="ShopServlet?command=admin_main" class="a_tag" style="font-size:40px;"><b>관리자 홈으로</b></a>
 	
 	<div id="login">
 	<c:choose>
@@ -146,20 +136,12 @@ font-size:30px;
 	<div id="category_container">
 		<table id="category_table">
 			<tr><!-- 이미지와 카테코리명에 동일한 주소 줄 것! -->
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=outer1" class="a_tag"><img src="https://image.msscdn.net/images/goods_img/20200123/1280017/1280017_2_500.jpg?t=20200820161743"></a></td>
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=top2" class="a_tag"><img src="https://image.msscdn.net/images/goods_img/20210907/2113554/2113554_3_500.jpg?t=20220405095359"></a></td>
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=pants3" class="a_tag"><img src="https://image.msscdn.net/images/prd_img/20220314/2417216/detail_2417216_11_500.jpg"></a></td>
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=training4" class="a_tag"><img src="https://image.msscdn.net/images/goods_img/20190828/1133891/1133891_2_500.jpg?t=20190904173725"></a></td>
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=shoes5" class="a_tag"><img src="https://image.msscdn.net/images/goods_img/20160224/311052/311052_3_500.jpg?t=20200416114434"></a></td>
-				<td><a href="ShopServlet?command=admin_category_list&categoryName=acc6" class="a_tag"><img src="https://image.msscdn.net/images/goods_img/20190511/1042191/1042191_1_500.jpg?t=20220628145624"></a></td>
-			</tr>
-			<tr>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=outer1" class="a_tag a_tag3">아우터</a></th>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=top2" class="a_tag a_tag3">상의</a></th>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=pants3" class="a_tag a_tag3">바지</a></th>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=training4" class="a_tag a_tag3">트레이닝</a></th>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=shoes5" class="a_tag a_tag3">신발</a></th>
-				<th><a href="ShopServlet?command=admin_category_list&categoryName=acc6" class="a_tag a_tag3">패션소품</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=outer1" class="a_tag">Outter</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=top2" class="a_tag">Top</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=pants3" class="a_tag">Pants&Jeans</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=training4" class="a_tag">Training</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=shoes5" class="a_tag">Shoes</a></th>
+				<th><a href="ShopServlet?command=admin_category_list&categoryName=acc6" class="a_tag">Accessories</a></th>
 			</tr>
 		</table>
 	</div>
